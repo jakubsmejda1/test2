@@ -1,13 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="keywords" content="photographer, Jakub Šmejda, JK smejda">
+    <title>Jakub "JK" Šmejda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Vítejte na stránce!</h1>
-    <p>Toto je ukázkový obsah generovaný automaticky.</p>
-    <button onclick="alert('Děkujeme za kliknutí!')">Klikni mě</button>
+  
+        <header>
+            <h1 id="index_h1" class="indie-flower-regular">
+            Jakub "JK" Šmejda
+            </h1>
+        </header>
+        <section class="slider">
+                <div class="slides" id="slides">
+                  <div class="slide"><img src="images/DSC05051.jpg" alt="Obrázek 1"></div>
+                  <div class="slide"><img src="images/DSC02412.jpg" alt="Obrázek 2" loading="lazy"></div>
+                  <div class="slide"><img src="images/DSC02503.jpg" alt="Obrázek 3" loading="lazy"></div>
+                  <div class="slide"><img src="images/DSC05189.jpg" alt="Obrázek 4" loading="lazy"></div>
+                  <div class="slide"><img src="images/DSC05472.jpg" alt="Obrázek 5" loading="lazy"></div>
+                  <div class="slide"><img src="images/DSC05515.jpg" alt="Obrázek 6" loading="lazy"></div>
+                  <div class="slide"><img src="images/DSC05525.jpg" alt="Obrázek 7" loading="lazy"></div>
+                  <div class="slide"><img src="images/DSC04869.jpg" alt="Obrázek 8" loading="lazy"></div>
+                  <div class="slide"><img src="images/DSC05038.jpg" alt="Obrázek 9" loading="lazy"></div>
+                  <div class="slide"><img src="images/DSC05042.jpg" alt="Obrázek 10" loading="lazy"></div>
+                  <div class="slide"><img src="images/DSC05501.jpg" alt="Obrázek 11" loading="lazy"></div>
+                  <div class="slide"><img src="images/DSC05504.jpg" alt="Obrázek 12" loading="lazy"></div>
+                </div>
+                <script>
+                    let index = 0;
+                    const slides = document.getElementById('slides');
+                    const totalSlides = slides.children.length;
+                  
+                    setInterval(() => {
+                      index = (index + 1) % totalSlides;
+                      slides.style.transform = `translateX(-${index * 100}vw)`;
+                    }, 6000); // mění obrázek každých 6 sekund
+                  </script>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="">O mně</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    <main>
+
+    </main>
+    <summary>
+        <h2 id="kontakt">Kontaktuj mě</h2>
+        <form action="gg">
+            <input type="text" name="name" id="name" placeholder="Jméno"><br>
+            <input type="email" name="email" id="email" placeholder="E-mail" required><br>
+            <textarea name="message" id="msg" placeholder="Napiš mi zprávu..."></textarea><br>
+            <button id="form_button" type="submit">odeslat</button>
+        </form>
+    </summary>
+    <footer>
+        <a href="https://www.instagram.com/jk.smejda/"><img src="images/icons8-ig-48.png" alt=""></a>
+        <a href="https://www.facebook.com/profile.php?id=61577747758665"><img src="images/icons8-fb-48.png" alt=""></a>
+        <a href=""><img src="images/icons8-linkedin-48.png" alt=""></a>
+        <p>© 2025 Jakub Šmejda - Všechna práva vyhrazena.</p>
+    </footer>
 </body>
 </html>
