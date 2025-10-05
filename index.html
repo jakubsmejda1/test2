@@ -33,16 +33,7 @@
                   <div class="slide"><img src="images/DSC05501.jpg" alt="Obrázek 11" loading="lazy"></div>
                   <div class="slide"><img src="images/DSC05504.jpg" alt="Obrázek 12" loading="lazy"></div>
                 </div>
-                <script>
-                    let index = 0;
-                    const slides = document.getElementById('slides');
-                    const totalSlides = slides.children.length;
-                  
-                    setInterval(() => {
-                      index = (index + 1) % totalSlides;
-                      slides.style.transform = `translateX(-${index * 100}vw)`;
-                    }, 6000); // mění obrázek každých 6 sekund
-                  </script>
+                
         </section>
         <nav>
             <ul>
@@ -69,5 +60,6 @@
         <a href=""><img src="images/icons8-linkedin-48.png" alt=""></a>
         <p>© 2025 Jakub Šmejda - Všechna práva vyhrazena.</p>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>
